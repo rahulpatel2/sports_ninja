@@ -10,9 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180821161037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "articles", force: :cascade do |t|
+    t.bigint "source_id", null: false, comment: "Reference to the Source"
+    t.string "title", null: false, comment: "Title of Article"
+    t.string "author", comment: "Author of Article"
+    t.string "url", comment: "URL of Article"
+    t.string "image_url", comment: "Image URL of Article"
+    t.string "description", comment: "Description of Article"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["source_id"], name: "articles_source_id_index"
+  end
+
+  create_table "sources", force: :cascade do |t|
+    t.string "name", null: false, comment: "News Source Name"
+    t.string "rss_url", null: false, comment: "Url of RSS"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "articles", "sources", name: "articles_source_id_fkey"
 end
