@@ -1,0 +1,1 @@
+json.sources @sources, partial: 'source', as: :source
