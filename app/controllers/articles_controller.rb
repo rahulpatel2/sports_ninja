@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   def index
     articles = all_articles
     @count =  articles.count
-    @articles = articles.paginate(limit_param, offset_param).order('title asc')
+    @articles = articles.paginate(limit_param, offset_param).order('created_at desc')
   end
 
   private
