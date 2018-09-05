@@ -4,7 +4,9 @@
 sources = [ { name: "The Times of India", rss_url: "https://timesofindia.indiatimes.com/rssfeeds/4719148.cms" },
             { name: "The Hindu", rss_url: "https://www.thehindu.com/sport/feeder/default.rss" },
             { name: "Indian Express", rss_url: "https://indianexpress.com/section/sports/feed/" },
-            { name: "FIRSTPOST", rss_url: "https://www.firstpost.com/rss/sports.xml" },
+            { name: "Money Control", rss_url: "http://www.moneycontrol.com/rss/sports.xml" },
+            { name: "DNA", rss_url: "https://www.dnaindia.com/feeds/sport.xml" },
+            { name: "BUSINESS STANDARD", rss_url: "https://www.business-standard.com/rss/current-affairs-sports-11516.rss" },
             { name: "Hindustan Times", rss_url: "https://www.hindustantimes.com/rss/sports/rssfeed.xml" }
           ]
 sources.each do |source|

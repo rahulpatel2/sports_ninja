@@ -12,6 +12,7 @@ namespace :news  do
                          url: page.url, image_url: page.images.best, description: page.best_description)
         rescue Exception => e
           puts "Error: - #{e}"
+          next
         end
       end
     end
